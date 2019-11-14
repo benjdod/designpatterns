@@ -3,7 +3,7 @@
 
 *Points of Focus: static vs. nonstatic methods and variables, private constructors*
 
-In this example, let's assume, for the sake of argument, that we have a single bag of cats, to which we can add cats, remove cats, and shake the bag.
+You've heard of letting the cat out of the bag, but we're gonna put them into the bag. Ha... ha...<br> In this example, let's assume, for the sake of argument, that we have a single bag of cats, to which we can add cats, remove cats, and shake the bag.
 
 ### `Cat` (interface):
 The cat interface specifies a single void method `meow()`. In each implementation, this method should print the cat's meow to the console.
