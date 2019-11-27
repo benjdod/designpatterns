@@ -2,19 +2,19 @@ package main;
 
 public class BasicImage implements Image {
 
-    private int[][][] _image;
+    private int[][][] _imagearray;
 
     public BasicImage(int[][][] imagearray) {
         
         if (imagearray[0][0].length != 3) {throw new IllegalArgumentException("image array can only have 3 color channels");}
-        _image = imagearray;
+        _imagearray = imagearray;
 
-        //#region: rudimentary clipping
-        for (int i = 0; i < _image.length; i++) {
-            for (int j = 0; j < _image[0].length; j++) {
+        //#region: clipping to 0-255
+        for (int i = 0; i < _imagearray.length; i++) {
+            for (int j = 0; j < _imagearray[0].length; j++) {
                 for (int m = 0; m < 3; m++) {
-                    if (_image[i][j][m] > 255) {
-                        _image[i][j][m] = 255;
+                    if (_imagearray[i][j][m] > 255) {
+                        _imagearray[i][j][m] = 255;
                     }
                 }
             }
@@ -24,7 +24,7 @@ public class BasicImage implements Image {
 
     @Override
     public int[][][] getImageArray() {
-        return _image;
+        return _imagearray;
     }
 
 }
