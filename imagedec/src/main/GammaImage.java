@@ -1,11 +1,11 @@
 package main;
 
-public class GammaImage implements DecoratedImage {
-    private Image _image;
+public class GammaImage extends DecoratedImage {
+
     private double _gamma;
 
     public GammaImage(Image image) {
-        _image = image;
+        super(image);
         _gamma = 1;
     }
 
@@ -27,12 +27,13 @@ public class GammaImage implements DecoratedImage {
             }
         }
 
-        // FIXME: this doesn't work 
         for (int i = 0; i < temparray.length; i++) {
             for (int j = 0; j < temparray[0].length; j++) {
                 for (int m = 0; m < 3; m++) {
+
+                    // the gamma function
                     temparray[i][j][m] = (int)Math.round(Math.pow(((double)temparray[i][j][m])/256, _gamma)*256);
-                    // System.out.println(temparray[i][j][m]);
+
                     // clipping values that are out of range (0-255)
                     if (temparray[i][j][m] > 255) {
                         temparray[i][j][m] = 255;

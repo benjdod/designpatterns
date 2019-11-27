@@ -10,22 +10,18 @@ import main.Image;
 
 public class ImageWrite {
 
-	String _filepath;
+	String _dirpath;
 
-	public ImageWrite(String filepath) {
-		_filepath = filepath;
+	public ImageWrite(String directory) {
+		_dirpath = directory;
 	}
 
-	public void setFilepath(String filepath) {
-		_filepath = filepath;
-	}
-
-	public void writeImage(Image img) throws IOException {
+	public void writeImage(Image img, String filename) throws IOException {
 
 		int[][][] imagearray = img.getImageArray();
 
 		BufferedImage b = new BufferedImage(imagearray.length, imagearray[0].length, BufferedImage.TYPE_INT_RGB);
-		File outfile = new File(_filepath);
+		File outfile = new File(_dirpath + "/" + filename + ".jpg");
 
 		for (int i = 0; i < imagearray.length; i++) {
 			for (int j = 0; j < imagearray[0].length; j++) {

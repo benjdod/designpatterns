@@ -7,7 +7,7 @@ import main.helper.ImageWrite;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        ImageWrite writer = new ImageWrite("img/outimg.png");
+        ImageWrite writer = new ImageWrite("img");
         int[][][] img = new int[256][256][3];
         
         for (int i = 0; i < img.length; i++) {
@@ -18,10 +18,12 @@ public class Main {
             }
         }
 
-        BasicImage r = ImageImport.importImage("img/kmp.jpg");
-        ContrastImage c = new ContrastImage(r);
-        GammaImage g = new GammaImage(c);
+        BasicImage b = ImageImport.importImage("img/kmp.jpg");
+        ContrastImage c = new ContrastImage(b);
+        GammaImage g = new GammaImage(b);
         c.setContrast(0);
-        writer.writeImage(c);
+        g.setGamma(0.2);
+        // writer.writeImage(c, "contrast");
+        writer.writeImage(g, "gamma");
     }
 }
