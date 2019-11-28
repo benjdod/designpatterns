@@ -29,10 +29,10 @@ public class Main {
         sample_list.add(new PaintSample("Mandarin",ColorFamily.ORANGE));
 
         // constructing a new iterator which only iterates over the blue paint samples
-        Iterator<PaintSample> iter = new PaintSampleIterator(sample_list, ColorFamily.BLUE);
+        Iterator<PaintSample> blueiter = new ColorFamilyIterator(sample_list, ColorFamily.BLUE);
         
-        while (iter.hasNext()) {
-            System.out.println(iter.next().getName());
+        while (blueiter.hasNext()) {
+            System.out.println(blueiter.next().getName());
         }
 
     }

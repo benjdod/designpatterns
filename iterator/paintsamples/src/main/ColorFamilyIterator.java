@@ -6,12 +6,12 @@ import java.util.NoSuchElementException;
 
 import main.PaintSample.ColorFamily;
 
-public class PaintSampleIterator implements Iterator<PaintSample> {
+public class ColorFamilyIterator implements Iterator<PaintSample> {
     private ColorFamily _family;
     private Iterator<PaintSample> _iter;
     private PaintSample _next;
     
-    public PaintSampleIterator(ArrayList<PaintSample> sample_list, ColorFamily color_family) {
+    public ColorFamilyIterator(ArrayList<PaintSample> sample_list, ColorFamily color_family) {
         _family = color_family;
         _iter = sample_list.iterator();
     }
