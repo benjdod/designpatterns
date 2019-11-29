@@ -11,6 +11,5 @@ public class Main {
         CatBag.getCatBag().addCat(s);
 
         CatBag.getCatBag().shakeBag();
-        return;
     }
 }

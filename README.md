@@ -10,7 +10,14 @@ This is a collection of common design patterns used in Java.
 - **Bag of Cats (*singleton*):**<br> A single, systemwide bag of cats which we can add and remove cats from. 
 
 #### Iterator
-- **Paint Sample (*custom iterator*):**<br> An iterator which iterates over paint samples of a certain color. Exciting. 
+- **Paint Sample:**<br> An iterator which iterates over paint samples of a certain color. Exciting. 
+
+#### Decorator
+- **CheckIn:**<br> Using the decorator pattern to create a CheckIn system.
+- **Image Decorator:**<br> Using the decorator pattern to add effects to images. 
+
+#### Observer/Observable
+- **Barista:**<br> A coffee shop with a barista that calls out drinks.
 
 ---
 

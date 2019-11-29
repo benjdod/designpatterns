@@ -1,9 +1,9 @@
 # Bag of Cats 
 ### The Factory Design Pattern
 
-*Points of Focus: static vs. nonstatic methods and variables, private constructors*
-
 You've heard of letting the cat out of the bag, but we're gonna put them into the bag. Ha... ha...<br> In this example, let's assume, for the sake of argument, that we have a single bag of cats, to which we can add cats, remove cats, and shake the bag.
+
+## Overview
 
 ### `Cat` (interface):
 The cat interface specifies a single void method `meow()`. In each implementation, this method should print the cat's meow to the console.
@@ -26,4 +26,4 @@ Building off this idea, you might notice that there is a single, **static** CatB
 
 ## Multitions:
 
-The idea of a multiton is a more generalized version of a singleton. By using a *private* constructor in combination with a [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html), we can generate and access multiple instances of a class in a controlled way, much like in a singleton class. 
+The idea of a multiton is a more generalized version of a singleton. By using a *private* constructor in combination with a [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html) of instances of the class, we can generate and access multiple instances of a class in a controlled way, much like in a singleton class. 

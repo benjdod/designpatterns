@@ -3,9 +3,11 @@ package main;
 import java.util.ArrayList;
 
 public class CatBag {
+
     // instance variable
     private ArrayList<Cat> _catsinbag;
-    // static variable to hold the single instance
+
+    // static variable to hold the one instance of CatBag we want to make
     private static CatBag _thebag;
 
     private CatBag() {
